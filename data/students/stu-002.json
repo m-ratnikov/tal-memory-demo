@@ -1,0 +1,79 @@
+{
+  "external_id": "stu-002",
+  "name": "Marcus",
+  "reports": [
+    {
+      "external_id": "stu-002-r1",
+      "created_at": "2026-01-19T09:00:00+00:00",
+      "content": "Personality assessment: Marcus tends to panic and sell prematurely when he encounters a losing trade, often doubting the validity of his trading strategy during market downturns. To counter this, he aims to better understand market volatility to improve his decision-making process. Marcus prefers using technical analysis over fundamental analysis for his trading decisions. However, he struggles to manage stress effectively during volatile market conditions and relies heavily on trading signals from external sources to guide his trades."
+    },
+    {
+      "external_id": "stu-002-r2",
+      "created_at": "2026-05-27T09:00:00+00:00",
+      "content": "Follow-up assessment: Marcus has demonstrated an ability to remain calm during losing trades, adhering to his predetermined strategy and avoiding premature sales. He has also developed effective stress management techniques to better handle market volatility. With a preference for technical analysis over fundamental analysis, he often doubts the validity of his trading strategy, particularly when encountering market downturns. Marcus aims to enhance his understanding of market volatility to improve his decision-making process. He continues to rely heavily on trading signals from external sources to inform his trading decisions."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-002-c1",
+      "started_at": "2026-03-10T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "Honestly, when I see a trade start to turn red, I can't help but hit the sell button. I just freak out.",
+          "at": "2026-03-10T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What usually goes through your mind at that moment?",
+          "at": "2026-03-10T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It's like a flood of anxiety. I just imagine it going worse, especially with something like Tesla during a wild swing.",
+          "at": "2026-03-10T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you feel when the market gets volatile like that?",
+          "at": "2026-03-10T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I feel like I'm drowning in stress, especially when everything's moving too fast. It's hard to stay calm.",
+          "at": "2026-03-10T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you think understanding volatility better could help you?",
+          "at": "2026-03-10T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "If I understood it better, I think I'd make more informed decisions instead of just reacting. I want to analyze it, not just panic.",
+          "at": "2026-03-10T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Can you recall a recent trade where this happened?",
+          "at": "2026-03-10T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Yeah, just last week with NVIDIA. I sold as soon as it dipped a bit, and then it bounced right back up.",
+          "at": "2026-03-10T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What did you learn from that experience?",
+          "at": "2026-03-10T09:09:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I realized I need to control this urge to sell at the first sign of trouble. I need a better plan for handling these situations.",
+          "at": "2026-03-10T09:10:00+00:00"
+        }
+      ]
+    }
+  ]
+}

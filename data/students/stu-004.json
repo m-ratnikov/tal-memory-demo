@@ -1,0 +1,79 @@
+{
+  "external_id": "stu-004",
+  "name": "Elena",
+  "reports": [
+    {
+      "external_id": "stu-004-r1",
+      "created_at": "2026-02-02T09:00:00+00:00",
+      "content": "Personality assessment: Elena often increases her trade size impulsively following a losing trade in an attempt to quickly recover her losses. While she shows diligence in setting stop losses, she frequently moves them further away as her trades go against her, exposing herself to greater risk. Her primary goal remains to achieve daily profitability, regardless of the prevailing market conditions. Elena struggles to maintain her composure, often letting frustrations from losses negatively impact subsequent trades. She has a clear preference for technical analysis over fundamental analysis, relying heavily on chart patterns and technical indicators. After a winning trade, Elena tends to feel overconfident, leading her to take unnecessary risks without proper analysis."
+    },
+    {
+      "external_id": "stu-004-r2",
+      "created_at": "2026-06-09T09:00:00+00:00",
+      "content": "Follow-up assessment: Elena previously had a tendency to impulsively scale up her trade size following losses in an attempt to swiftly recover, which undermined her trading strategy. However, she now steadfastly adheres to her predefined stop-loss levels, demonstrating disciplined risk management. Her primary focus remains on achieving profitability on a daily basis, irrespective of market fluctuations. Elena has cultivated greater emotional resilience, allowing her to distance herself emotionally and center her attention on executing her trading plan with objectivity. She has a preference for technical analysis, heavily relying on chart patterns and technical indicators over fundamental analysis. Despite this progress, she sometimes becomes overconfident post-victory, occasionally leading her to engage in risky trades without sufficiently thorough analysis."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-004-c1",
+      "started_at": "2026-03-24T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've been sticking to my stop losses as best as I can.",
+          "at": "2026-03-24T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "That's good to hear. How does that usually go for you?",
+          "at": "2026-03-24T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, not always great. I have this habit of moving them further when a trade goes against me.",
+          "at": "2026-03-24T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think prompts you to move the stop losses?",
+          "at": "2026-03-24T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I get really frustrated when I see losses, and it just makes me want to hang on a bit longer.",
+          "at": "2026-03-24T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And how does that frustration affect your trading afterwards?",
+          "at": "2026-03-24T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Usually not well. It kind of spills over, and I end up entering trades just to make up for the losses.",
+          "at": "2026-03-24T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Do you change your trade size during those times?",
+          "at": "2026-03-24T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Yeah, I sometimes increase my trade size impulsively, hoping to recover quickly.",
+          "at": "2026-03-24T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you feel after making those impulsive decisions?",
+          "at": "2026-03-24T09:09:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Regretful, mostly, because it often doesn't work out the way I hope.",
+          "at": "2026-03-24T09:10:00+00:00"
+        }
+      ]
+    }
+  ]
+}

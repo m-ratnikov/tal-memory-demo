@@ -1,0 +1,12 @@
+.git/
+.gitignore
+.env
+.venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.log
+mm_blocks.json

@@ -1,0 +1,69 @@
+{
+  "external_id": "stu-001",
+  "name": "Priya",
+  "reports": [
+    {
+      "external_id": "stu-001-r1",
+      "created_at": "2026-01-12T09:00:00+00:00",
+      "content": "Personality assessment: Priya exhibits signs of stress and anxiety following a losing trade, affecting her decision-making process. Her tendency to take profits prematurely indicates a fear of losing gains, which can impede her overall profit potential. Despite these challenges, Priya actively seeks to improve her backtesting skills in order to identify more effective trading strategies. Her patience score is notably low, at 3 out of 10, which influences her preference for short-term strategies that limit her exposure to market volatility. Priya also demonstrates agility by swiftly adapting her trading approaches based on recent market news, allowing her to capitalize on the latest developments."
+    },
+    {
+      "external_id": "stu-001-r2",
+      "created_at": "2026-05-20T09:00:00+00:00",
+      "content": "Follow-up assessment: Priya experiences noticeable stress and anxiety following a losing trade. However, she has shown progress in her discipline by allowing her profitable trades to reach their maximum potential before she takes profits. Priya is actively working to improve her backtesting skills to better identify effective trading strategies. Her patience level is assessed at a score of 6 out of 10, indicating room for improvement. She favors short-term trading strategies, which help her minimize exposure to market volatility. Priya is also able to quickly adjust her trading strategies in response to the latest market news, showcasing her ability to adapt swiftly."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-001-c1",
+      "started_at": "2026-03-03T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've been feeling really stressed after my SPY trade yesterday. It was a losing trade and I just can't shake it off.",
+          "at": "2026-03-03T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What about it is stressing you the most?",
+          "at": "2026-03-03T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I don't know, maybe just the fear of losing again. I get so tense after taking a hit.",
+          "at": "2026-03-03T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you usually do when you're in a winning trade?",
+          "at": "2026-03-03T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I tend to take profits as soon as I see a gain. It's like I'm worried it'll disappear if I wait too long.",
+          "at": "2026-03-03T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And how does that affect your overall trading?",
+          "at": "2026-03-03T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I guess I miss out on bigger moves. Like with AAPL last week, I sold too early. I just don't have the patience to let it ride.",
+          "at": "2026-03-03T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "If you had to rate your patience on a scale of 1 to 10, where would you stand?",
+          "at": "2026-03-03T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I'd probably say a 3, if I'm being real. It's definitely something I need to work on.",
+          "at": "2026-03-03T09:08:00+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "spec": {
+    "name": "Yuki",
+    "archetype": "overconfident position-sizer ignoring risk limits",
+    "shape": "improvement",
+    "dates": [
+      "2026-01-26",
+      "2026-03-17",
+      "2026-06-02"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "risk management awareness",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki frequently takes larger positions than his risk management plan allows."
+        }
+      ]
+    },
+    {
+      "topic": "position sizing accuracy",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki tends to overestimate his ability to predict market movements, leading to oversized trades."
+        }
+      ]
+    },
+    {
+      "topic": "risk tolerance score",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki's risk tolerance score is 3 out of 10."
+        },
+        {
+          "stage": 2,
+          "statement": "Yuki's risk tolerance score is 7 out of 10."
+        }
+      ]
+    },
+    {
+      "topic": "reaction to losing trades",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki often doubles down on losing trades to recover losses quickly."
+        }
+      ]
+    },
+    {
+      "topic": "learning goal",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki aims to incorporate stop-loss orders consistently in his trading strategy."
+        }
+      ]
+    },
+    {
+      "topic": "preference for trading frequency",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Yuki prefers high-frequency trading due to its potential for quick returns."
+        }
+      ]
+    }
+  ]
+}

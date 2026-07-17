@@ -1,0 +1,74 @@
+{
+  "external_id": "stu-006",
+  "name": "Aisha",
+  "reports": [
+    {
+      "external_id": "stu-006-r1",
+      "created_at": "2026-02-16T09:00:00+00:00",
+      "content": "Personality assessment: Aisha often finds herself struggling to maintain emotional control when confronted with unexpected news events, which tends to affect her trading decisions negatively. She is actively seeking to adopt a more systematic approach to news analysis in a bid to improve her trading outcomes. Despite this intention, Aisha regularly overreacts to market headlines, leading to impulsive trades. Her preference for trading in news-sensitive markets stems from an attraction to their excitement and volatility. However, this preference also presents challenges, as Aisha finds it difficult to implement effective risk management strategies, especially after swiftly reacting to news. Additionally, she relies predominantly on social media platforms for her trading insights and news sources."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-006-c1",
+      "started_at": "2026-04-14T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "You know, I'm finding it hard to keep my emotions in check when there's news rocking the market. Like yesterday, when that unexpected Fed announcement hit and sent SPY all over the place\u2014I panicked.",
+          "at": "2026-04-14T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What did you do when you panicked?",
+          "at": "2026-04-14T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I ended up selling some of my positions too early. I didn't follow my trading plan, which was frustrating.",
+          "at": "2026-04-14T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And what would you have preferred to do?",
+          "at": "2026-04-14T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I think I should have stuck to my analysis rather than reacting instantly. It's just tough when news hits out of nowhere.",
+          "at": "2026-04-14T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How does that news impact your decision-making?",
+          "at": "2026-04-14T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It throws me off balance, makes me second-guess my trades. That emotional charge clouds my judgment, like with that Fed news.",
+          "at": "2026-04-14T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think could help you stay balanced next time?",
+          "at": "2026-04-14T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Maybe setting clearer rules for myself, especially around news events. Because when I'm surprised, my emotions run wild.",
+          "at": "2026-04-14T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What kind of rules do you have in mind?",
+          "at": "2026-04-14T09:09:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Probably guidelines for holding back from immediate reactions, like a waiting period before making any decisions when news breaks.",
+          "at": "2026-04-14T09:10:00+00:00"
+        }
+      ]
+    }
+  ]
+}

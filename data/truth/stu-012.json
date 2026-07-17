@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Omar",
+    "archetype": "loss-averse hedger who cuts winners and lets losers ride",
+    "shape": "improvement",
+    "dates": [
+      "2026-02-12",
+      "2026-04-16",
+      "2026-06-22"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "risk management score",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar's risk management score is 3 out of 10."
+        },
+        {
+          "stage": 2,
+          "statement": "Omar's risk management score is 7 out of 10."
+        }
+      ]
+    },
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar often struggles to close losing trades promptly, letting them ride in hopes of recovery."
+        }
+      ]
+    },
+    {
+      "topic": "emotional discipline",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar is known for his emotional discipline, rarely panicking during volatile market moments."
+        }
+      ]
+    },
+    {
+      "topic": "market analysis preference",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar prefers technical analysis over fundamental analysis when evaluating potential trades."
+        }
+      ]
+    },
+    {
+      "topic": "investment strategy",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar aims to develop a strategy that balances risk with the pursuit of modest gains."
+        }
+      ]
+    },
+    {
+      "topic": "response to winning trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Omar tends to cut his winning trades too early, missing out on potential higher profits."
+        },
+        {
+          "stage": 2,
+          "statement": "Omar has learned to let his winning trades run longer, capturing more profits from successful trades."
+        }
+      ]
+    }
+  ]
+}

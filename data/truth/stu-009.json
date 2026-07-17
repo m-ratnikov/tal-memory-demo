@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Liam",
+    "archetype": "over-leveraged swing trader ignoring stop rules",
+    "shape": "relapse",
+    "dates": [
+      "2026-01-30",
+      "2026-04-02",
+      "2026-06-18"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "risk management",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam often ignores his predetermined stop-loss limits, leading to larger-than-planned losses."
+        }
+      ]
+    },
+    {
+      "topic": "trade strategy",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam relies heavily on technical indicators for making swing trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "capital preservation",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam aims to consistently preserve his trading capital by the end of each quarter."
+        }
+      ]
+    },
+    {
+      "topic": "emotional control",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam frequently allows emotions like fear and greed to influence his trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "risk assessment score",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam's risk assessment score is 3 out of 10."
+        },
+        {
+          "stage": 1,
+          "statement": "Liam's risk assessment score is 8 out of 10."
+        },
+        {
+          "stage": 2,
+          "statement": "Liam's risk assessment score is 4 out of 10."
+        }
+      ]
+    },
+    {
+      "topic": "trading platform",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Liam prefers using mobile apps for executing trades due to their convenience."
+        }
+      ]
+    }
+  ]
+}

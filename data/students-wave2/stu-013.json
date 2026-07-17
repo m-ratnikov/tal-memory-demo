@@ -1,0 +1,26 @@
+{
+  "external_id": "stu-013",
+  "name": "Grace",
+  "reports": [
+    {
+      "external_id": "stu-013-r1",
+      "created_at": "2026-03-15T09:00:00+00:00",
+      "content": "Personality assessment: Grace is an emotional trader who frequently revenge-trades after a losing trade, forcing a new position to win the money back. She also tends to exit positions impulsively when the market moves against her. Grace has strong technical analysis skills but does not yet trust her own setups. Goal: build a rules-based checklist she can follow under pressure. Scores: discipline 4 out of 10, patience 3 out of 10."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-013-c1",
+      "started_at": "2026-06-03T09:00:00+00:00",
+      "messages": [
+        {"role": "student", "content": "This rough patch is finally easing a bit. This week I actually walked away after my losses instead of forcing the next trade.", "at": "2026-06-03T09:00:00+00:00"},
+        {"role": "coach", "content": "That's real progress, Grace. A couple of months ago you'd have jumped straight back in.", "at": "2026-06-03T09:01:00+00:00"},
+        {"role": "student", "content": "Right? Honestly, I've completely kicked the revenge-trading. Haven't forced a single trade after a loss in about two weeks now.", "at": "2026-06-03T09:02:00+00:00"},
+        {"role": "coach", "content": "Worth celebrating. Is anything still tripping you up?", "at": "2026-06-03T09:03:00+00:00"},
+        {"role": "student", "content": "Yeah, don't get me wrong - I'm still my own worst enemy. I keep moving my stop-loss mid-trade. Did it on NVDA this week and gave back most of the gain.", "at": "2026-06-03T09:04:00+00:00"},
+        {"role": "coach", "content": "So the revenge-trading is fading but moving your stop mid-trade is stubborn. Let's target that one next.", "at": "2026-06-03T09:05:00+00:00"},
+        {"role": "student", "content": "Sounds good. Small wins, I guess.", "at": "2026-06-03T09:06:00+00:00"}
+      ]
+    }
+  ]
+}

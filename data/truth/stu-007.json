@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "name": "Viktor",
+    "archetype": "scalper flirting with burnout and overtrading",
+    "shape": "steady",
+    "dates": [
+      "2026-02-23",
+      "2026-04-21",
+      "2026-06-30"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor often reacts to losing trades by immediately trying to recover losses, which exacerbates his overtrading tendencies."
+        }
+      ]
+    },
+    {
+      "topic": "work-life balance",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor's goal is to establish a work-life balance that minimizes the risk of burnout while maintaining profitability."
+        }
+      ]
+    },
+    {
+      "topic": "focus and attention",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor is highly focused with the ability to concentrate intensely for short bursts, ideal for his scalping strategy."
+        }
+      ]
+    },
+    {
+      "topic": "risk management score",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor's risk management score is 4 out of 10."
+        }
+      ]
+    },
+    {
+      "topic": "trading hours preference",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor prefers trading during high volatility periods, such as market openings and economic announcements."
+        }
+      ]
+    },
+    {
+      "topic": "learning and adaptability",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Viktor is quick to adapt to new market conditions, continuously updating his strategies in response to changes."
+        }
+      ]
+    }
+  ]
+}

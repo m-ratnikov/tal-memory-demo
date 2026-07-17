@@ -1,0 +1,69 @@
+{
+  "external_id": "stu-012",
+  "name": "Omar",
+  "reports": [
+    {
+      "external_id": "stu-012-r1",
+      "created_at": "2026-02-12T09:00:00+00:00",
+      "content": "Personality assessment: Omar scores a 3 out of 10 in risk management, indicating a need for improvement in handling trading risks effectively. He often struggles with closing losing trades promptly, allowing them to linger in hopes of a turnaround. Despite this, Omar exhibits commendable emotional discipline, maintaining his composure during volatile market situations without resorting to panic. His analytical approach prioritizes technical analysis over fundamental analysis when evaluating potential trades. Omar's trading strategy oriented towards modest gains often leads him to prematurely terminate winning trades, thereby missing opportunities for higher profits. His aim is to refine his strategy to better balance risk while still pursuing these modest gains."
+    },
+    {
+      "external_id": "stu-012-r2",
+      "created_at": "2026-06-22T09:00:00+00:00",
+      "content": "Follow-up assessment: Omar's risk management score currently sits at 7 out of 10, suggesting a solid understanding of managing potential losses. Yet, he frequently encounters difficulty with closing losing trades in a timely manner, often allowing them to continue in anticipation of a turnaround. Despite this, Omar is recognized for his emotional discipline, maintaining composure during market volatility. When it comes to evaluating trades, he shows a preference for technical analysis over fundamental analysis. His goal is to craft a strategy that effectively balances risk with the pursuit of modest gains. Additionally, Omar has successfully adjusted his approach to allow winning trades to run longer, capturing more profits from these advantages."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-012-c1",
+      "started_at": "2026-04-16T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "Hey! I've been looking at some of my trades, and I feel like I'm doing something wrong.",
+          "at": "2026-04-16T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What specifically seems off to you?",
+          "at": "2026-04-16T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, I checked my risk management score, and it's just a 3 out of 10. That's pretty low, right?",
+          "at": "2026-04-16T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think is contributing to that score?",
+          "at": "2026-04-16T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I think I'm cutting my winners too early. Like, I sold AAPL last week for a small gain, but then it shot up another 10% after I sold.",
+          "at": "2026-04-16T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you usually decide when to sell a winning trade?",
+          "at": "2026-04-16T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I second guess myself. I take profits too soon because I'm afraid the market might turn against me.",
+          "at": "2026-04-16T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And what about the losing trades?",
+          "at": "2026-04-16T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "That's another issue\u2014I hang on to them too long. I kept holding onto TSLA, hoping it would bounce back, but it just kept dropping.",
+          "at": "2026-04-16T09:08:00+00:00"
+        }
+      ]
+    }
+  ]
+}

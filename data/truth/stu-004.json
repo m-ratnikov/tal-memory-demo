@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Elena",
+    "archetype": "revenge-trader chasing back losses same day",
+    "shape": "improvement",
+    "dates": [
+      "2026-02-02",
+      "2026-03-24",
+      "2026-06-09"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena often increased her trade size impulsively after a losing trade to quickly recover her losses."
+        }
+      ]
+    },
+    {
+      "topic": "risk management",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena was diligent in setting stop losses but frequently moved them further away as trades went against her."
+        },
+        {
+          "stage": 2,
+          "statement": "Elena now consistently adheres to her predetermined stop-loss levels without adjustment, ensuring disciplined risk management."
+        }
+      ]
+    },
+    {
+      "topic": "trading goals",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena's primary goal was to achieve daily profitability regardless of the market conditions."
+        }
+      ]
+    },
+    {
+      "topic": "emotional resilience",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena found it difficult to maintain composure and often let the frustration from losses affect subsequent trades."
+        },
+        {
+          "stage": 2,
+          "statement": "Elena has developed greater emotional resilience and can now detach emotionally, focusing on executing her trading plan objectively."
+        }
+      ]
+    },
+    {
+      "topic": "analysis preference",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena preferred using technical analysis over fundamental analysis, relying heavily on chart patterns and technical indicators."
+        }
+      ]
+    },
+    {
+      "topic": "response to winning trades",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Elena tended to feel overconfident after a winning trade, which sometimes led to taking unnecessary risks without proper analysis."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Secrets - NEVER commit. The deployed app reads these from the host's env vars.
+.env
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Logs / scratch
+*.log
+mm_blocks.json
+
+# OS
+.DS_Store
+Thumbs.db

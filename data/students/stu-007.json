@@ -1,0 +1,69 @@
+{
+  "external_id": "stu-007",
+  "name": "Viktor",
+  "reports": [
+    {
+      "external_id": "stu-007-r1",
+      "created_at": "2026-02-23T09:00:00+00:00",
+      "content": "Personality assessment: Viktor often finds himself reacting to losing trades by swiftly attempting to recover losses, exacerbating his tendency to overtrade. His focus is sharp, with an ability to concentrate intensely over short periods, which aligns well with his scalping strategy. However, his risk management score is a 4 out of 10, indicating room for improvement in this area. Viktor prefers trading during periods of high volatility, such as market openings and times of economic announcements, capitalizing on his quick adaptation to new market conditions. His overarching goal is to establish a work-life balance that helps minimize the risk of burnout while still maintaining profitability."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-007-c1",
+      "started_at": "2026-04-21T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've had a tough week with my trades, lost quite a bit trying to catch up.",
+          "at": "2026-04-21T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What happened with your trades?",
+          "at": "2026-04-21T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I got hit hard on some NASDAQ stocks, thought I could turn it around by doubling down, but it didn't work.",
+          "at": "2026-04-21T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Doubling down sounds risky. How do you usually handle losses?",
+          "at": "2026-04-21T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I tend to get really reactive. If I lose, especially a chunk, I just want to get back what I lost ASAP.",
+          "at": "2026-04-21T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And how does that affect your trading overall?",
+          "at": "2026-04-21T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It makes me overtrade. Like, after a losing trade, I jump into new positions without much thought, just to recover.",
+          "at": "2026-04-21T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How did that go this week?",
+          "at": "2026-04-21T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Not great. Every time I tried to recover, I just ended up digging a deeper hole.",
+          "at": "2026-04-21T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "I see. What do you think you can do differently next time?",
+          "at": "2026-04-21T09:09:00+00:00"
+        }
+      ]
+    }
+  ]
+}

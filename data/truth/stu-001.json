@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Priya",
+    "archetype": "anxious profit-taker who cuts winners early",
+    "shape": "improvement",
+    "dates": [
+      "2026-01-12",
+      "2026-03-03",
+      "2026-05-20"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya becomes visibly stressed and anxious after experiencing a losing trade."
+        }
+      ]
+    },
+    {
+      "topic": "profit-taking timing discipline",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya often takes profits too early, fearing that her gains will quickly evaporate."
+        },
+        {
+          "stage": 2,
+          "statement": "Priya demonstrates improved discipline by allowing her profitable trades to realize their full potential before taking profits."
+        }
+      ]
+    },
+    {
+      "topic": "backtesting skills",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya aims to enhance her backtesting skills to better identify winning trading strategies."
+        }
+      ]
+    },
+    {
+      "topic": "patience score",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya's patience score is 3 out of 10."
+        },
+        {
+          "stage": 2,
+          "statement": "Priya's patience score is 6 out of 10."
+        }
+      ]
+    },
+    {
+      "topic": "trading strategy preference",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya prefers short-term trading strategies that minimize her exposure to market volatility."
+        }
+      ]
+    },
+    {
+      "topic": "adapting to market news",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Priya quickly adapts her trading strategies based on the latest market news, demonstrating agility."
+        }
+      ]
+    }
+  ]
+}

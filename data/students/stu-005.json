@@ -1,0 +1,74 @@
+{
+  "external_id": "stu-005",
+  "name": "Tom",
+  "reports": [
+    {
+      "external_id": "stu-005-r1",
+      "created_at": "2026-02-09T09:00:00+00:00",
+      "content": "Personality assessment: Tom is diligent in maintaining detailed journal entries after each trading session, carefully analyzing his decisions and outcomes. Despite having a logical understanding of market fluctuations, he sometimes experiences frustration when a trade results in a loss. Tom sets a goal of achieving at least a 5% monthly return by continuously refining his trading strategies and staying disciplined. He shows a preference for technical analysis tools over fundamental analysis to make informed decisions. Tom methodically approaches the study of new trading strategies, dedicating a week to evaluate their effectiveness before any implementation. Every Sunday, he reviews his trades, using the insights gained to adjust his plans for the upcoming week."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-005-c1",
+      "started_at": "2026-04-07T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've been looking over my journal, and I noticed some patterns with how I trade AAPL.",
+          "at": "2026-04-07T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What sort of patterns are standing out to you?",
+          "at": "2026-04-07T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, I consistently record after each session, and it seems like I'm catching the same impulsive entries. I write down everything, like what I was feeling and what led me to the decision.",
+          "at": "2026-04-07T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "That sounds thorough. How do those entries help you evaluate your decisions?",
+          "at": "2026-04-07T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "They really highlight the emotional triggers. For example, last Thursday I got in on TSLA because I felt like I was missing out, even though I had a rule against chasing.",
+          "at": "2026-04-07T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How often do you review your previous entries?",
+          "at": "2026-04-07T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I do it weekly. It's like a ritual now, going over each detail and seeing what I can improve.",
+          "at": "2026-04-07T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And what do you think is the benefit of maintaining that routine?",
+          "at": "2026-04-07T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It keeps me accountable. I can't ignore the mistakes or the successes; everything's there in black and white.",
+          "at": "2026-04-07T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Sounds like a solid approach. How would you say this impacts your trading overall?",
+          "at": "2026-04-07T09:09:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It's made a huge difference in my self-awareness. I catch myself making fewer mistakes, like those impulsive trades.",
+          "at": "2026-04-07T09:10:00+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$description": "Machine-readable contract for the living architecture canon. Enforced by tests/test_canon_integrity.py; narrated by docs/architecture/README.md ('Canon integrity'). The canon is human-authored in the spec-driven-architecture format; this manifest plus the test are the deterministic post-condition. Principle: verify, don't mechanize.",
+  "$paths": "docs[].path is resolved relative to this file (docs/architecture/). requiredSections and namedArtifacts match headings case-insensitively, ignoring a leading 'N.' number prefix.",
+  "docs": [
+    {
+      "path": "system-context.md",
+      "requiredSections": ["Boundary runtime flow"]
+    },
+    {
+      "path": "system-design.md",
+      "requiredSections": ["Containers", "Key runtime flows", "Components (C4 L3)"]
+    },
+    {
+      "path": "domain-model.md",
+      "requiredSections": ["Entity model", "Lifecycle", "Domain events"]
+    },
+    {
+      "path": "glossary.md",
+      "requiredSections": []
+    },
+    {
+      "path": "cross-cutting.md",
+      "requiredSections": []
+    },
+    {
+      "path": "README.md",
+      "requiredSections": ["Layout", "Rules", "Canon integrity"]
+    }
+  ],
+  "namedArtifacts": ["boundary runtime flow", "fact lifecycle"],
+  "adrDir": "../adr"
+}

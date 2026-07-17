@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "name": "Aisha",
+    "archetype": "news-driven trader who overreacts to headlines",
+    "shape": "steady",
+    "dates": [
+      "2026-02-16",
+      "2026-04-14",
+      "2026-06-23"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "emotional regulation",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha frequently struggles to manage her emotions when faced with unexpected news events."
+        }
+      ]
+    },
+    {
+      "topic": "news analysis",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha aims to develop a more structured approach to analyzing news to improve her trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "headline influence",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha tends to overreact to market headlines, often making impulsive trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "trading strategy",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha prefers trading in markets that are sensitive to news, finding them more exciting and volatile."
+        }
+      ]
+    },
+    {
+      "topic": "risk management",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha finds it challenging to implement effective risk management practices, particularly after reacting quickly to news."
+        }
+      ]
+    },
+    {
+      "topic": "information sources",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Aisha prefers using social media platforms as her primary source of news for trading insights."
+        }
+      ]
+    }
+  ]
+}

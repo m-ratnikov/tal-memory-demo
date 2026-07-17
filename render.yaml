@@ -1,0 +1,37 @@
+# Render blueprint: a persistent Docker web service + managed Postgres (pgvector),
+# colocated. Deploy: push this repo to GitHub, then in Render choose
+# "New > Blueprint" and point it at the repo. Fill the sync:false secrets in the
+# dashboard after the first deploy (see DEPLOY.md).
+services:
+  - type: web
+    name: tal-memory-demo
+    runtime: docker
+    plan: starter            # 'free' spins down when idle (slow first click); 'starter' stays warm
+    region: oregon
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false           # DEDICATED, spend-capped key - set in the dashboard, never commit
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+      - key: RECONCILE_JUDGE_MODEL
+        value: gpt-4o
+      # The DB owner role (runs schema.sql + migrations, bypasses RLS).
+      - key: DSN_OWNER
+        fromDatabase:
+          name: tal-db
+          property: connectionString
+      # The tal_app (RLS-enforced) role - set once the role exists (see DEPLOY.md).
+      - key: DSN_APP
+        sync: false
+      # Optional shared-password gate for the public URL (see DEPLOY.md). Leave
+      # unset to serve open (paired with a spend cap + pre-baked answers).
+      - key: DEMO_PASSWORD
+        sync: false
+
+databases:
+  - name: tal-db
+    plan: starter            # 'free' Postgres expires after ~30 days; 'starter' persists
+    region: oregon
+    postgresMajorVersion: "16"

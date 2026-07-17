@@ -1,0 +1,12 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: tal-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: tal
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql

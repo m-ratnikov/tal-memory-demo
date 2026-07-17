@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Sofia",
+    "archetype": "FOMO chaser who buys late into runs",
+    "shape": "relapse",
+    "dates": [
+      "2026-01-05",
+      "2026-03-31",
+      "2026-06-06"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia tends to panic and sell immediately after experiencing a losing trade, often locking in significant losses."
+        }
+      ]
+    },
+    {
+      "topic": "resilience to market noise",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia finds it challenging to ignore market noise and frequently reacts to every minor price fluctuation."
+        }
+      ]
+    },
+    {
+      "topic": "risk management",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia aims to implement a stricter risk management strategy to prevent emotional decision-making during volatile market periods."
+        }
+      ]
+    },
+    {
+      "topic": "decision-making speed",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia prefers to take her time when making trading decisions, often resulting in her entering trades late."
+        }
+      ]
+    },
+    {
+      "topic": "belief in technical analysis",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia strongly believes in the power of technical analysis and primarily relies on technical indicators to make trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "handling FOMO",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Sofia frequently succumbs to FOMO, buying into trades too late during market upswings."
+        },
+        {
+          "stage": 1,
+          "statement": "Sofia successfully overcomes her FOMO by establishing strict entry criteria and sticking to them."
+        },
+        {
+          "stage": 2,
+          "statement": "Sofia has relapsed into her old FOMO-driven habits, now often rationalizing late entries as strategic decisions."
+        }
+      ]
+    }
+  ]
+}

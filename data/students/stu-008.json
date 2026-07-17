@@ -1,0 +1,69 @@
+{
+  "external_id": "stu-008",
+  "name": "Sofia",
+  "reports": [
+    {
+      "external_id": "stu-008-r1",
+      "created_at": "2026-01-05T09:00:00+00:00",
+      "content": "Personality assessment: Sofia often succumbs to panic and sells immediately following a losing trade, which typically results in her locking in significant losses. She struggles to tune out market noise and frequently reacts to every minor price fluctuation. To curtail emotional decision-making during volatile market periods, Sofia aims to implement a stricter risk management strategy. Her trading approach is characterized by a slower decision-making process, leading to her entering trades late. She strongly believes in technical analysis and primarily relies on technical indicators for her trading decisions. However, Sofia frequently falls prey to FOMO, purchasing trades too late during market upswings, which can negatively impact her trading performance."
+    },
+    {
+      "external_id": "stu-008-r2",
+      "created_at": "2026-03-31T09:00:00+00:00",
+      "content": "Follow-up assessment: Sofia frequently panics and sells after a losing trade, which often leads to significant losses. Her challenge is compounded by her tendency to react to minor price fluctuations, struggling to ignore market noise. To address these issues, she is dedicated to implementing a stricter risk management strategy to curb emotional decision-making during market volatility. Sofia prefers a methodical approach, usually taking her time before entering trades, which sometimes causes delays in her decision-making. Despite these challenges, she places strong faith in technical analysis and uses technical indicators as her primary tool for trading decisions. Notably, Sofia effectively tackles her fear of missing out (FOMO) by setting and adhering to strict entry criteria."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-008-c1",
+      "started_at": "2026-06-06T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've had a tough week with these trades. I keep jumping in late, thinking I'm catching a strategic dip, but it's really just my FOMO talking.",
+          "at": "2026-06-06T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What makes you realize it's FOMO after the fact?",
+          "at": "2026-06-06T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, I get in right after a price jump, like with TSLA this week. Then it starts to dip, and I panic and sell at a loss.",
+          "at": "2026-06-06T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And what goes through your mind when the price starts to dip?",
+          "at": "2026-06-06T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I feel like I'm about to lose more, even though it's just a minor fluctuation. It's hard to stay calm and not react immediately.",
+          "at": "2026-06-06T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you usually handle it when you feel that panic?",
+          "at": "2026-06-06T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I end up selling too soon, locking in losses instead of letting it recover. It's a pattern I'm stuck in.",
+          "at": "2026-06-06T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think would help you stay calm in those moments?",
+          "at": "2026-06-06T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I guess not paying attention to every tick would help, but I can't seem to tune the noise out when I\u2019m in a position.",
+          "at": "2026-06-06T09:08:00+00:00"
+        }
+      ]
+    }
+  ]
+}

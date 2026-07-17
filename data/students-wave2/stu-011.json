@@ -1,0 +1,64 @@
+{
+  "external_id": "stu-011",
+  "name": "Nadia",
+  "reports": [
+    {
+      "external_id": "stu-011-r1",
+      "created_at": "2026-03-02T09:00:00+00:00",
+      "content": "Personality assessment: Nadia is exceptionally thorough in creating detailed trading plans, meticulously ensuring they cover multiple scenarios. However, significant market volatility makes her anxious and leads to indecision, often resulting in hesitation to execute trades. Her aim is to consistently follow through with trades according to her pre-determined plans without freezing during these critical moments. She thrives in structured and methodical learning environments that offer clear and predictable outcomes. Nadia manages her time with precision, allocating defined periods for market research and the development of her trading plans. Additionally, she takes pleasure in conducting detailed post-trade analyses to understand market movements and refine her future trading strategies."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-011-c1",
+      "started_at": "2026-05-04T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've been working on my plan for trading TSLA next week. I'm thinking if it breaks above 750, I'll go long, but if it dips below 700, I'll short it.",
+          "at": "2026-05-04T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "That sounds detailed. How do you decide the scenarios?",
+          "at": "2026-05-04T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I lay out different potential market events and price movements. So, 750 as resistance and 700 as support seemed logical based on recent patterns.",
+          "at": "2026-05-04T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What else do you consider in your plans?",
+          "at": "2026-05-04T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I also account for any news events or earnings that might impact TSLA. Plus, I have contingency plans in case there's unexpected volatility.",
+          "at": "2026-05-04T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Why do you think it's important to plan for multiple scenarios?",
+          "at": "2026-05-04T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I've found that having multiple scenarios prepared helps me react quickly and confidently. It reduces the emotional aspect of trading.",
+          "at": "2026-05-04T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Do you always use this detailed approach?",
+          "at": "2026-05-04T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Yes, for every trade. I even have a checklist to ensure I don't miss any key elements before executing a trade.",
+          "at": "2026-05-04T09:08:00+00:00"
+        }
+      ]
+    }
+  ]
+}

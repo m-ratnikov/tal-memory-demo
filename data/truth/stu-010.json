@@ -1,0 +1,78 @@
+{
+  "spec": {
+    "name": "Chen",
+    "archetype": "analytical overthinker who misses entries",
+    "shape": "mixed",
+    "dates": [
+      "2026-02-05",
+      "2026-04-09",
+      "2026-06-25"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen tends to dwell on losing trades, analyzing them far more than winning trades, which often leads to indecision."
+        }
+      ]
+    },
+    {
+      "topic": "confidence in strategy",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen aims to develop confidence in his trading strategy to mitigate second-guessing his analysis."
+        }
+      ]
+    },
+    {
+      "topic": "use of technical indicators",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen prefers using a combination of moving averages and RSI for his trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "time management",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen struggles with time management, often spending excessive hours analyzing charts without executing trades."
+        }
+      ]
+    },
+    {
+      "topic": "entry signal responsiveness",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen frequently misses optimal entry signals due to overthinking potential outcomes."
+        },
+        {
+          "stage": 2,
+          "statement": "Chen has improved in catching entry signals promptly by setting predefined entry rules and alarms, which reduced his overthinking."
+        }
+      ]
+    },
+    {
+      "topic": "risk tolerance",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Chen exhibits a conservative risk tolerance, preferring trades with higher probability and lower potential reward."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "name": "Tom",
+    "archetype": "methodical journaler with steady habits",
+    "shape": "steady",
+    "dates": [
+      "2026-02-09",
+      "2026-04-07",
+      "2026-06-16"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "journaling practice",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom consistently writes detailed journal entries after each trading session, analyzing his decisions and outcomes."
+        }
+      ]
+    },
+    {
+      "topic": "reaction to losing trades",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom sometimes experiences frustration when a trade turns into a loss, despite his logical understanding of market fluctuations."
+        }
+      ]
+    },
+    {
+      "topic": "goal for trading consistency",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom aims to achieve a minimum of 5% monthly return by refining his trading strategies and maintaining discipline."
+        }
+      ]
+    },
+    {
+      "topic": "preference for analytical tools",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom prefers using technical analysis tools over fundamental analysis to make informed trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "approach to learning new strategies",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom methodically studies one new trading strategy at a time, dedicating a week to evaluate its effectiveness before implementation."
+        }
+      ]
+    },
+    {
+      "topic": "habit of reviewing trades",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Tom reviews his trades every Sunday, using the insights gained to adjust his plans for the upcoming week."
+        }
+      ]
+    }
+  ]
+}

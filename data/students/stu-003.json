@@ -1,0 +1,64 @@
+{
+  "external_id": "stu-003",
+  "name": "Yuki",
+  "reports": [
+    {
+      "external_id": "stu-003-r1",
+      "created_at": "2026-01-26T09:00:00+00:00",
+      "content": "Personality assessment: Yuki often exceeds the limits set by his risk management plan because he regularly takes on larger positions. This behavior is partly due to his tendency to overestimate his ability to foresee market movements, resulting in trades that are too large. Despite having a low risk tolerance score of 3 out of 10, Yuki frequently chooses to double down on losing trades, attempting to recover losses rapidly. While he aims to use stop-loss orders more consistently within his trading strategies, his preference for high-frequency trading aligns with his desire for quick returns."
+    },
+    {
+      "external_id": "stu-003-r2",
+      "created_at": "2026-06-02T09:00:00+00:00",
+      "content": "Follow-up assessment: Yuki consistently takes positions that exceed the constraints of his risk management plan, a behavior driven by his tendency to overestimate his market prediction abilities. This leads him to engage in trades that are larger than advisable. His risk tolerance is notably high, with a score of 7 out of 10, which aligns with his frequent decision to double down on losses to expedite recovery. Despite these tendencies, Yuki aims to integrate stop-loss orders as a regular part of his trading regimen. Additionally, he favors high-frequency trading, drawn to its potential for swift returns."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-003-c1",
+      "started_at": "2026-03-17T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I've been thinking about my trades from last week. I went in pretty heavy on AAPL and it didn't quite work out.",
+          "at": "2026-03-17T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think happened there?",
+          "at": "2026-03-17T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, my risk management plan suggests a smaller position, but I thought I could handle it because I was feeling confident.",
+          "at": "2026-03-17T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How did taking a larger position affect you?",
+          "at": "2026-03-17T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It was pretty stressful, honestly. My risk tolerance is just 3 out of 10, so I felt anxious seeing the losses pile up.",
+          "at": "2026-03-17T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What can you learn from this experience?",
+          "at": "2026-03-17T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I guess I need to stick to my risk management guidelines and not let my confidence push me to overexpose myself.",
+          "at": "2026-03-17T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "That sounds like a wise approach. How will you apply this in future trades?",
+          "at": "2026-03-17T09:07:00+00:00"
+        }
+      ]
+    }
+  ]
+}

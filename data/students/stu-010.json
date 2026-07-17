@@ -1,0 +1,130 @@
+{
+  "external_id": "stu-010",
+  "name": "Chen",
+  "reports": [
+    {
+      "external_id": "stu-010-r1",
+      "created_at": "2026-02-05T09:00:00+00:00",
+      "content": "Personality assessment: Chen shows a tendency to linger on losing trades, examining them more thoroughly than his wins, leading to indecisiveness. His goal is to bolster confidence in his trading strategy to reduce instances of second-guessing his own analysis. Chen utilizes a combination of moving averages and RSI as part of his trading decision framework. However, he struggles with managing his time efficiently, often spending excessive hours on chart analysis without actually executing trades. This often results in missing optimal entry signals due to overthinking potential trade outcomes. Chen's risk tolerance is conservative; he favors trades with higher probability but lower potential reward, valuing stability over high-risk opportunities."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-010-c1",
+      "started_at": "2026-04-09T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "I'm finding it difficult to make timely trades. I'll see a good entry point, like with TSLA last week, but then I overthink it.",
+          "at": "2026-04-09T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What usually goes through your mind when you spot these entry points?",
+          "at": "2026-04-09T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I start considering all the possible outcomes, like what if there's a sudden market drop or unexpected news. By the time I'm done thinking, it's usually too late to enter.",
+          "at": "2026-04-09T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "And how do you feel after missing those trade opportunities?",
+          "at": "2026-04-09T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Frustrated, honestly. It's like I'm stuck trying to play everything too safe.",
+          "at": "2026-04-09T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "I see. How do you handle your trades once they're executed?",
+          "at": "2026-04-09T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "If it's a losing trade, like my recent Apple one, I really get stuck on it. I analyze every little detail about why it went wrong.",
+          "at": "2026-04-09T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What about your winning trades?",
+          "at": "2026-04-09T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I don't spend nearly as much time on those. I just note them as something that went right and move on.",
+          "at": "2026-04-09T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How does this focus on losing trades affect your future decisions?",
+          "at": "2026-04-09T09:09:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I end up second-guessing myself a lot, which adds to the indecision and makes me hesitant to jump on good signals.",
+          "at": "2026-04-09T09:10:00+00:00"
+        }
+      ]
+    },
+    {
+      "external_id": "stu-010-c2",
+      "started_at": "2026-06-25T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "Hey, I\u2019ve been catching those entry signals a lot faster now. Setting predefined entry rules and alarms totally helped cut down my overthinking.",
+          "at": "2026-06-25T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "That sounds like a great improvement. How's that feeling for your trading?",
+          "at": "2026-06-25T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Feels good not second-guessing myself as much, especially getting into trades like AAPL just when I planned.",
+          "at": "2026-06-25T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Nice work. How do you handle it when trades don\u2019t go as expected?",
+          "at": "2026-06-25T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Well, I tend to obsess over my losses. I find myself analyzing them in detail, way more than I do for the winners.",
+          "at": "2026-06-25T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What effect does that have on your decision-making?",
+          "at": "2026-06-25T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "It usually leads to indecision. I hesitate on future trades because I'm stuck in over-analyzing past failures.",
+          "at": "2026-06-25T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Sounds like a challenging cycle. What are you considering to address that?",
+          "at": "2026-06-25T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I\u2019m working on building confidence in my strategy. If I trust my analysis more, I think I'll second-guess myself less.",
+          "at": "2026-06-25T09:08:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "Building confidence could make a big difference. What steps will you take towards that?",
+          "at": "2026-06-25T09:09:00+00:00"
+        }
+      ]
+    }
+  ]
+}

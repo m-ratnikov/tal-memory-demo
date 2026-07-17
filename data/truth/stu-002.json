@@ -1,0 +1,82 @@
+{
+  "spec": {
+    "name": "Marcus",
+    "archetype": "panic-seller who freezes on adverse moves",
+    "shape": "improvement",
+    "dates": [
+      "2026-01-19",
+      "2026-03-10",
+      "2026-05-27"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "reaction to losing trades",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus initially panics and sells prematurely whenever he encounters a losing trade."
+        },
+        {
+          "stage": 2,
+          "statement": "Marcus has learned to stay calm during losing trades and follows his pre-decided strategy instead of selling prematurely."
+        }
+      ]
+    },
+    {
+      "topic": "understanding market volatility",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus aims to better understand market volatility to improve his decision-making process."
+        }
+      ]
+    },
+    {
+      "topic": "confidence in trading strategy",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus often doubts the validity of his trading strategy when faced with market downturns."
+        }
+      ]
+    },
+    {
+      "topic": "use of technical analysis",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus prefers using technical analysis over fundamental analysis when making trading decisions."
+        }
+      ]
+    },
+    {
+      "topic": "ability to manage stress",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus struggles to manage stress effectively during volatile market conditions."
+        },
+        {
+          "stage": 2,
+          "statement": "Marcus has developed effective stress management techniques for better handling market volatility."
+        }
+      ]
+    },
+    {
+      "topic": "experience with trading signals",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Marcus relies heavily on trading signals from external sources to make his trading decisions."
+        }
+      ]
+    }
+  ]
+}

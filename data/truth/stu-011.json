@@ -1,0 +1,74 @@
+{
+  "spec": {
+    "name": "Nadia",
+    "archetype": "meticulous planner who freezes at trade execution",
+    "shape": "steady",
+    "dates": [
+      "2026-03-02",
+      "2026-05-04",
+      "2026-06-29"
+    ]
+  },
+  "chains": [
+    {
+      "topic": "approach to planning",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia is exceptionally thorough in developing detailed trading plans, ensuring each plan addresses multiple scenarios."
+        }
+      ]
+    },
+    {
+      "topic": "reaction to market volatility",
+      "kind": "struggle",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia becomes anxious and paralyzed by indecision when faced with significant market volatility, causing her to hesitate in executing trades."
+        }
+      ]
+    },
+    {
+      "topic": "goal for trade execution",
+      "kind": "goal",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia aims to consistently execute trades according to her pre-determined plans without freezing during critical moments."
+        }
+      ]
+    },
+    {
+      "topic": "learning style preference",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia prefers structured and methodical learning environments that provide clear and predictable outcomes."
+        }
+      ]
+    },
+    {
+      "topic": "time management",
+      "kind": "trait",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia manages her time with precision, allocating specific blocks for market research and plan development."
+        }
+      ]
+    },
+    {
+      "topic": "post-trade analysis",
+      "kind": "preference",
+      "versions": [
+        {
+          "stage": 0,
+          "statement": "Nadia enjoys conducting detailed post-trade analyses to understand market movements and refine her future trading strategies."
+        }
+      ]
+    }
+  ]
+}

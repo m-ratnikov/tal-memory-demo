@@ -1,0 +1,69 @@
+{
+  "external_id": "stu-009",
+  "name": "Liam",
+  "reports": [
+    {
+      "external_id": "stu-009-r1",
+      "created_at": "2026-01-30T09:00:00+00:00",
+      "content": "Personality assessment: Liam often disregards his predetermined stop-loss limits, which results in greater losses than initially planned. He heavily depends on technical indicators to inform his swing trading decisions. His primary goal is to consistently maintain his trading capital by the end of each quarter. However, Liam frequently lets emotions such as fear and greed steer his trading choices. His ability to assess risk is notably low, with a score of 3 out of 10. Despite these challenges, Liam prefers the convenience of mobile apps for executing trades."
+    },
+    {
+      "external_id": "stu-009-r2",
+      "created_at": "2026-04-02T09:00:00+00:00",
+      "content": "Follow-up assessment: Liam regularly overrides his stop-loss limits, which results in larger-than-anticipated losses. He places significant trust in technical indicators to guide his swing trading choices. A core objective for Liam is to ensure he preserves his trading capital by the close of each quarter. However, emotions such as fear and greed often sway his decision-making process. He scores an 8 out of 10 in risk assessment, suggesting a high tolerance for risk. For executing trades, he favors the convenience of mobile apps."
+    }
+  ],
+  "conversations": [
+    {
+      "external_id": "stu-009-c1",
+      "started_at": "2026-06-18T09:00:00+00:00",
+      "messages": [
+        {
+          "role": "student",
+          "content": "Hey Coach, I've been trying to analyze my recent trades, and I realized that my risk assessment score is pretty low, like a 4 out of 10.",
+          "at": "2026-06-18T09:00:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What do you think contributes to that score?",
+          "at": "2026-06-18T09:01:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Honestly, I think it's because I tend to ignore my stop-loss limits more than I should. I set them for a reason, but sometimes I just let them slip.",
+          "at": "2026-06-18T09:02:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "What happens when you ignore those stop-loss limits?",
+          "at": "2026-06-18T09:03:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I end up with larger losses than I planned, like with that trade on AAPL last week. I should have cut my losses, but I held on too long.",
+          "at": "2026-06-18T09:04:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "How do you decide when to enter or exit a trade?",
+          "at": "2026-06-18T09:05:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "I mostly rely on technical indicators for my swing trades. Patterns and charts help me time my moves, but I guess that's not foolproof if I'm not disciplined with the stops.",
+          "at": "2026-06-18T09:06:00+00:00"
+        },
+        {
+          "role": "coach",
+          "content": "So, discipline with stop-loss is a key area for improvement?",
+          "at": "2026-06-18T09:07:00+00:00"
+        },
+        {
+          "role": "student",
+          "content": "Yeah, exactly. I need to stick to my initial limits and not let emotions get in the way. It's just hard sometimes.",
+          "at": "2026-06-18T09:08:00+00:00"
+        }
+      ]
+    }
+  ]
+}

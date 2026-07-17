@@ -1,0 +1,853 @@
+[
+  {
+    "name": "stu-001-recall-1",
+    "student_external_id": "stu-001",
+    "question": "How would you describe me when it comes to reaction to losing trades?",
+    "expected_fact": "Priya becomes visibly stressed and anxious after experiencing a losing trade.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-recall-2",
+    "student_external_id": "stu-001",
+    "question": "What is my goal around backtesting skills?",
+    "expected_fact": "Priya aims to enhance her backtesting skills to better identify winning trading strategies.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "improvement",
+      "recall"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-recall-3",
+    "student_external_id": "stu-001",
+    "question": "How do I prefer to work when it comes to trading strategy preference?",
+    "expected_fact": "Priya prefers short-term trading strategies that minimize her exposure to market volatility.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "preference",
+      "recall"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-supersede-4",
+    "student_external_id": "stu-001",
+    "question": "What do I struggle with when it comes to profit-taking timing discipline?",
+    "expected_fact": "Priya demonstrates improved discipline by allowing her profitable trades to realize their full potential before taking profits.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "struggle",
+      "supersede"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-supersede-probe-5",
+    "student_external_id": "stu-001",
+    "question": "Is this still true about me: Priya often takes profits too early, fearing that her gains will quickly evaporate.",
+    "expected_fact": "Priya demonstrates improved discipline by allowing her profitable trades to realize their full potential before taking profits.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-supersede-6",
+    "student_external_id": "stu-001",
+    "question": "What do I struggle with when it comes to patience score?",
+    "expected_fact": "Priya's patience score is 6 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "numeric",
+      "out-of-order",
+      "struggle",
+      "supersede"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-supersede-probe-7",
+    "student_external_id": "stu-001",
+    "question": "Is this still true about me: Priya's patience score is 3 out of 10.",
+    "expected_fact": "Priya's patience score is 6 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "numeric",
+      "out-of-order",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-001-refusal-8",
+    "student_external_id": "stu-001",
+    "question": "What did we agree about my favourite programming language?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "improvement",
+      "refusal"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-002-recall-1",
+    "student_external_id": "stu-002",
+    "question": "What is my goal around understanding market volatility?",
+    "expected_fact": "Marcus aims to better understand market volatility to improve his decision-making process.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "improvement",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-recall-2",
+    "student_external_id": "stu-002",
+    "question": "What do I struggle with when it comes to confidence in trading strategy?",
+    "expected_fact": "Marcus often doubts the validity of his trading strategy when faced with market downturns.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "struggle"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-recall-3",
+    "student_external_id": "stu-002",
+    "question": "How do I prefer to work when it comes to use of technical analysis?",
+    "expected_fact": "Marcus prefers using technical analysis over fundamental analysis when making trading decisions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "preference",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-supersede-4",
+    "student_external_id": "stu-002",
+    "question": "How would you describe me when it comes to reaction to losing trades?",
+    "expected_fact": "Marcus has learned to stay calm during losing trades and follows his pre-decided strategy instead of selling prematurely.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-supersede-probe-5",
+    "student_external_id": "stu-002",
+    "question": "Is this still true about me: Marcus initially panics and sells prematurely whenever he encounters a losing trade.",
+    "expected_fact": "Marcus has learned to stay calm during losing trades and follows his pre-decided strategy instead of selling prematurely.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede-probe",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-supersede-6",
+    "student_external_id": "stu-002",
+    "question": "How would you describe me when it comes to ability to manage stress?",
+    "expected_fact": "Marcus has developed effective stress management techniques for better handling market volatility.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-supersede-probe-7",
+    "student_external_id": "stu-002",
+    "question": "Is this still true about me: Marcus struggles to manage stress effectively during volatile market conditions.",
+    "expected_fact": "Marcus has developed effective stress management techniques for better handling market volatility.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede-probe",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-002-refusal-8",
+    "student_external_id": "stu-002",
+    "question": "What did we agree about my monthly rent budget?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "improvement",
+      "refusal"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-003-recall-1",
+    "student_external_id": "stu-003",
+    "question": "What do I struggle with when it comes to risk management awareness?",
+    "expected_fact": "Yuki frequently takes larger positions than his risk management plan allows.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "struggle"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-003-recall-2",
+    "student_external_id": "stu-003",
+    "question": "How would you describe me when it comes to position sizing accuracy?",
+    "expected_fact": "Yuki tends to overestimate his ability to predict market movements, leading to oversized trades.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-003-recall-3",
+    "student_external_id": "stu-003",
+    "question": "How would you describe me when it comes to reaction to losing trades?",
+    "expected_fact": "Yuki often doubles down on losing trades to recover losses quickly.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-003-supersede-4",
+    "student_external_id": "stu-003",
+    "question": "What do I struggle with when it comes to risk tolerance score?",
+    "expected_fact": "Yuki's risk tolerance score is 7 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "numeric",
+      "out-of-order",
+      "struggle",
+      "supersede"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-003-supersede-probe-5",
+    "student_external_id": "stu-003",
+    "question": "Is this still true about me: Yuki's risk tolerance score is 3 out of 10.",
+    "expected_fact": "Yuki's risk tolerance score is 7 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "numeric",
+      "out-of-order",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-003-refusal-6",
+    "student_external_id": "stu-003",
+    "question": "What did we agree about my marathon training plan?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "improvement",
+      "refusal"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-004-recall-1",
+    "student_external_id": "stu-004",
+    "question": "What do I struggle with when it comes to reaction to losing trades?",
+    "expected_fact": "Elena often increased her trade size impulsively after a losing trade to quickly recover her losses.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "recall",
+      "struggle"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-recall-2",
+    "student_external_id": "stu-004",
+    "question": "What is my goal around trading goals?",
+    "expected_fact": "Elena's primary goal was to achieve daily profitability regardless of the market conditions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "improvement",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-recall-3",
+    "student_external_id": "stu-004",
+    "question": "How do I prefer to work when it comes to analysis preference?",
+    "expected_fact": "Elena preferred using technical analysis over fundamental analysis, relying heavily on chart patterns and technical indicators.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "preference",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-supersede-4",
+    "student_external_id": "stu-004",
+    "question": "How would you describe me when it comes to risk management?",
+    "expected_fact": "Elena now consistently adheres to her predetermined stop-loss levels without adjustment, ensuring disciplined risk management.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-supersede-probe-5",
+    "student_external_id": "stu-004",
+    "question": "Is this still true about me: Elena was diligent in setting stop losses but frequently moved them further away as trades went against her.",
+    "expected_fact": "Elena now consistently adheres to her predetermined stop-loss levels without adjustment, ensuring disciplined risk management.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "supersede-probe",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-supersede-6",
+    "student_external_id": "stu-004",
+    "question": "What do I struggle with when it comes to emotional resilience?",
+    "expected_fact": "Elena has developed greater emotional resilience and can now detach emotionally, focusing on executing her trading plan objectively.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "struggle",
+      "supersede"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-supersede-probe-7",
+    "student_external_id": "stu-004",
+    "question": "Is this still true about me: Elena found it difficult to maintain composure and often let the frustration from losses affect subsequent trades.",
+    "expected_fact": "Elena has developed greater emotional resilience and can now detach emotionally, focusing on executing her trading plan objectively.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "improvement",
+      "out-of-order",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-004-refusal-8",
+    "student_external_id": "stu-004",
+    "question": "What did we agree about my diet plan?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "improvement",
+      "refusal"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-005-recall-1",
+    "student_external_id": "stu-005",
+    "question": "How would you describe me when it comes to journaling practice?",
+    "expected_fact": "Tom consistently writes detailed journal entries after each trading session, analyzing his decisions and outcomes.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-005-recall-2",
+    "student_external_id": "stu-005",
+    "question": "What do I struggle with when it comes to reaction to losing trades?",
+    "expected_fact": "Tom sometimes experiences frustration when a trade turns into a loss, despite his logical understanding of market fluctuations.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "struggle"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-005-recall-3",
+    "student_external_id": "stu-005",
+    "question": "What is my goal around goal for trading consistency?",
+    "expected_fact": "Tom aims to achieve a minimum of 5% monthly return by refining his trading strategies and maintaining discipline.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "numeric",
+      "recall",
+      "steady"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-005-refusal-4",
+    "student_external_id": "stu-005",
+    "question": "What did we agree about which broker my wife uses?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "refusal",
+      "steady"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-006-recall-1",
+    "student_external_id": "stu-006",
+    "question": "What do I struggle with when it comes to emotional regulation?",
+    "expected_fact": "Aisha frequently struggles to manage her emotions when faced with unexpected news events.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "struggle"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-006-recall-2",
+    "student_external_id": "stu-006",
+    "question": "What is my goal around news analysis?",
+    "expected_fact": "Aisha aims to develop a more structured approach to analyzing news to improve her trading decisions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "recall",
+      "steady"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-006-recall-3",
+    "student_external_id": "stu-006",
+    "question": "How would you describe me when it comes to headline influence?",
+    "expected_fact": "Aisha tends to overreact to market headlines, often making impulsive trading decisions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-006-refusal-4",
+    "student_external_id": "stu-006",
+    "question": "What did we agree about my plans for buying a house?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "refusal",
+      "steady"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-007-recall-1",
+    "student_external_id": "stu-007",
+    "question": "What do I struggle with when it comes to reaction to losing trades?",
+    "expected_fact": "Viktor often reacts to losing trades by immediately trying to recover losses, which exacerbates his overtrading tendencies.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "struggle"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-007-recall-2",
+    "student_external_id": "stu-007",
+    "question": "What is my goal around work-life balance?",
+    "expected_fact": "Viktor's goal is to establish a work-life balance that minimizes the risk of burnout while maintaining profitability.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "recall",
+      "steady"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-007-recall-3",
+    "student_external_id": "stu-007",
+    "question": "How would you describe me when it comes to focus and attention?",
+    "expected_fact": "Viktor is highly focused with the ability to concentrate intensely for short bursts, ideal for his scalping strategy.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "steady",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-007-refusal-4",
+    "student_external_id": "stu-007",
+    "question": "What did we agree about my meditation app subscription?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "refusal",
+      "steady"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-008-recall-1",
+    "student_external_id": "stu-008",
+    "question": "What do I struggle with when it comes to reaction to losing trades?",
+    "expected_fact": "Sofia tends to panic and sell immediately after experiencing a losing trade, often locking in significant losses.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "relapse",
+      "struggle"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-008-recall-2",
+    "student_external_id": "stu-008",
+    "question": "How would you describe me when it comes to resilience to market noise?",
+    "expected_fact": "Sofia finds it challenging to ignore market noise and frequently reacts to every minor price fluctuation.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "relapse",
+      "trait"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-008-recall-3",
+    "student_external_id": "stu-008",
+    "question": "What is my goal around risk management?",
+    "expected_fact": "Sofia aims to implement a stricter risk management strategy to prevent emotional decision-making during volatile market periods.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "recall",
+      "relapse"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-008-supersede-4",
+    "student_external_id": "stu-008",
+    "question": "What do I struggle with when it comes to handling FOMO?",
+    "expected_fact": "Sofia has relapsed into her old FOMO-driven habits, now often rationalizing late entries as strategic decisions.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "relapse",
+      "struggle",
+      "supersede"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-008-supersede-probe-5",
+    "student_external_id": "stu-008",
+    "question": "Is this still true about me: Sofia frequently succumbs to FOMO, buying into trades too late during market upswings.",
+    "expected_fact": "Sofia has relapsed into her old FOMO-driven habits, now often rationalizing late entries as strategic decisions.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "relapse",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-008-refusal-6",
+    "student_external_id": "stu-008",
+    "question": "What did we agree about the crypto wallet I lost in 2021?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "refusal",
+      "relapse"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-009-recall-1",
+    "student_external_id": "stu-009",
+    "question": "What do I struggle with when it comes to risk management?",
+    "expected_fact": "Liam often ignores his predetermined stop-loss limits, leading to larger-than-planned losses.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "relapse",
+      "struggle"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-009-recall-2",
+    "student_external_id": "stu-009",
+    "question": "How would you describe me when it comes to trade strategy?",
+    "expected_fact": "Liam relies heavily on technical indicators for making swing trading decisions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "recall",
+      "relapse",
+      "trait"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-009-recall-3",
+    "student_external_id": "stu-009",
+    "question": "What is my goal around capital preservation?",
+    "expected_fact": "Liam aims to consistently preserve his trading capital by the end of each quarter.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "recall",
+      "relapse"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-009-supersede-4",
+    "student_external_id": "stu-009",
+    "question": "What do I struggle with when it comes to risk assessment score?",
+    "expected_fact": "Liam's risk assessment score is 4 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "numeric",
+      "relapse",
+      "struggle",
+      "supersede"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-009-supersede-probe-5",
+    "student_external_id": "stu-009",
+    "question": "Is this still true about me: Liam's risk assessment score is 3 out of 10.",
+    "expected_fact": "Liam's risk assessment score is 4 out of 10.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "numeric",
+      "relapse",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-009-refusal-6",
+    "student_external_id": "stu-009",
+    "question": "What did we agree about my dog's name?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "refusal",
+      "relapse"
+    ],
+    "split": "dev"
+  },
+  {
+    "name": "stu-010-recall-1",
+    "student_external_id": "stu-010",
+    "question": "What do I struggle with when it comes to reaction to losing trades?",
+    "expected_fact": "Chen tends to dwell on losing trades, analyzing them far more than winning trades, which often leads to indecision.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "mixed",
+      "recall",
+      "struggle"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-010-recall-2",
+    "student_external_id": "stu-010",
+    "question": "What is my goal around confidence in strategy?",
+    "expected_fact": "Chen aims to develop confidence in his trading strategy to mitigate second-guessing his analysis.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "goal",
+      "mixed",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-010-recall-3",
+    "student_external_id": "stu-010",
+    "question": "How do I prefer to work when it comes to use of technical indicators?",
+    "expected_fact": "Chen prefers using a combination of moving averages and RSI for his trading decisions.",
+    "verify_supersede": false,
+    "expect_refusal": false,
+    "tags": [
+      "mixed",
+      "preference",
+      "recall"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-010-supersede-4",
+    "student_external_id": "stu-010",
+    "question": "What do I struggle with when it comes to entry signal responsiveness?",
+    "expected_fact": "Chen has improved in catching entry signals promptly by setting predefined entry rules and alarms, which reduced his overthinking.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "mixed",
+      "struggle",
+      "supersede"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-010-supersede-probe-5",
+    "student_external_id": "stu-010",
+    "question": "Is this still true about me: Chen frequently misses optimal entry signals due to overthinking potential outcomes.",
+    "expected_fact": "Chen has improved in catching entry signals promptly by setting predefined entry rules and alarms, which reduced his overthinking.",
+    "verify_supersede": true,
+    "expect_refusal": false,
+    "tags": [
+      "mixed",
+      "struggle",
+      "supersede-probe"
+    ],
+    "split": "test"
+  },
+  {
+    "name": "stu-010-refusal-6",
+    "student_external_id": "stu-010",
+    "question": "What did we agree about my star sign?",
+    "expected_fact": null,
+    "verify_supersede": false,
+    "expect_refusal": true,
+    "tags": [
+      "mixed",
+      "refusal"
+    ],
+    "split": "test"
+  }
+]

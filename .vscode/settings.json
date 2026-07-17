@@ -1,0 +1,6 @@
+{
+    "python.analysis.typeCheckingMode": "standard",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "snyk.advanced.organization": "2ee11d62-8e06-4eea-8d1b-fea43b669cfe",
+    "snyk.advanced.autoSelectOrganization": true
+}
