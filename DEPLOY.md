@@ -4,10 +4,10 @@ This app is a **persistent** web service (the migration wizard runs background
 jobs and the page polls for progress), so it runs as a long-lived container.
 The free, always-on home is the existing Caddy + Docker VPS
 (`wisery@103.6.168.161`): two containers behind Caddy at
-**https://tal.softwisery.com**, gated by a dedicated `DEMO_PASSWORD`.
+**https://demo.michaelratnikov.com**, gated by a dedicated `DEMO_PASSWORD`.
 
 ## Prerequisites (yours)
-1. **DNS**: an A record `tal.softwisery.com -> 103.6.168.161` (skip if `*.softwisery.com` is already wildcarded). Caddy needs it to issue the TLS cert.
+1. **DNS**: add an A record `demo.michaelratnikov.com -> 103.6.168.161` where michaelratnikov.com's DNS is managed. The apex runs on Vercel, but this subdomain points straight at the VPS (DNS-only, not proxied) - that is what Caddy needs to issue the TLS cert.
 2. **A dedicated, spend-capped `OPENAI_API_KEY`** - not your local key.
 3. **A `DEMO_PASSWORD`** to share with the client (username is ignored).
 
@@ -58,7 +58,7 @@ docker compose -f ~/vps/docker-compose.yml exec caddy caddy reload --config /etc
 sites keep serving.)
 
 ## 6. Verify
-- `https://tal.softwisery.com/health` -> `{"status":"ok"}` (no auth).
+- `https://demo.michaelratnikov.com/health` -> `{"status":"ok"}` (no auth).
 - The site prompts for the password, then `/`, `/meet`, `/vision`, `/architecture`,
   `/wizard` render; `/meet` shows Bob's then/now; an "ask" returns an answer.
 
