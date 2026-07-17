@@ -1,70 +1,76 @@
-# Deploying the demo (Render + Postgres/pgvector)
+# Deploying the demo (free, on the Wisery VPS)
 
 This app is a **persistent** web service (the migration wizard runs background
-jobs and the page polls for progress), so it runs as a long-lived container -
-not serverless. Render (Docker) + a managed Postgres with pgvector is the fit.
+jobs and the page polls for progress), so it runs as a long-lived container.
+The free, always-on home is the existing Caddy + Docker VPS
+(`wisery@103.6.168.161`): two containers behind Caddy at
+**https://tal.softwisery.com**, gated by a dedicated `DEMO_PASSWORD`.
 
-## 1. Provision from the blueprint
-Push this repo to GitHub, then in Render: **New > Blueprint** and point it at the
-repo. `render.yaml` provisions:
-- a Docker **web service** (`tal-memory-demo`) with a health check on `/health`, and
-- a managed **Postgres** (`tal-db`).
+## Prerequisites (yours)
+1. **DNS**: an A record `tal.softwisery.com -> 103.6.168.161` (skip if `*.softwisery.com` is already wildcarded). Caddy needs it to issue the TLS cert.
+2. **A dedicated, spend-capped `OPENAI_API_KEY`** - not your local key.
+3. **A `DEMO_PASSWORD`** to share with the client (username is ignored).
 
-`DSN_OWNER` is wired automatically from the database's connection string.
-
-## 2. Enable pgvector + create the schema
-Open the database's PSQL console in Render (or `psql "$DSN_OWNER"`) and run:
-```sql
-CREATE EXTENSION IF NOT EXISTS vector;
-```
-Then apply the schema (creates tables, RLS policies, the `tal_app` role, and the
-Alice/Bob seed):
+## 1. Get the code onto the VPS
+Private repo, so rsync from your machine (no GitHub auth needed on the VPS):
 ```bash
-psql "$DSN_OWNER" -f schema.sql
-```
-If the DB user lacks `CREATEROLE`, `schema.sql`'s `CREATE ROLE tal_app` will fail -
-create the role first as the owner, then re-run:
-```sql
-CREATE ROLE tal_app LOGIN PASSWORD 'choose-a-strong-password';
+# from the local repo (D:\__softwisery\wisery\tal-memory-demo):
+rsync -az --delete \
+  --exclude .venv --exclude __pycache__ --exclude .env \
+  ./ wisery@103.6.168.161:~/tal-memory-demo/
 ```
 
-## 3. Wire the app (RLS) role
-Set `DSN_APP` on the web service to the `tal_app` connection string - same host,
-db, and port as `DSN_OWNER`, but `tal_app` and its password:
-```
-DSN_APP=postgresql://tal_app:<password>@<host>:<port>/<db>
-```
-(Direct connection is fine at demo scale; `SET LOCAL app.student_id` is correct on
-it. Add a transaction-mode pooler only if concurrency grows.)
-
-## 4. Set the secrets (dashboard, never in git)
-- `OPENAI_API_KEY` - a **dedicated, spend-capped** key. Not your local key.
-- `DEMO_PASSWORD` - the shared password that gates the public URL (username is
-  ignored). Leave unset to serve open.
-- Optional `LANGSMITH_*` - leave off in production unless self-hosted (traces
-  carry student psychological facts).
-
-## 5. Seed the memory (one-off, a few cents of OpenAI)
-The schema seeds Alice and Bob's raw reports/conversations; distill them into
-facts once. From a Render **Shell** on the web service (or locally against the
-prod DSNs):
+## 2. Set the deploy secrets on the VPS
 ```bash
-uv run python -c "from app.migration import run_migration; from app.ingestion import ingest_conversations; print(run_migration()); print(ingest_conversations())"
+ssh wisery@103.6.168.161
+cd ~/tal-memory-demo
+cat > .env <<'EOF'
+OPENAI_API_KEY=sk-your-dedicated-capped-key
+DEMO_PASSWORD=choose-a-demo-password
+OPENAI_MODEL=gpt-4o-mini
+RECONCILE_JUDGE_MODEL=gpt-4o
+EOF
 ```
-This leaves the store at the clean 2-student baseline (Alice + Bob). The wizard's
-wave-2 import and its **Reset** button work from there; nothing else to seed.
+
+## 3. Bring it up
+```bash
+docker compose -f docker-compose.prod.yml up -d --build
+```
+`schema.sql` auto-applies on the DB's first init: tables, RLS policies, the
+`tal_app` role, and the Alice/Bob seed. The app comes up on host port 8010.
+
+## 4. Seed the memory (one-off, a few cents)
+```bash
+docker compose -f docker-compose.prod.yml exec tal-app \
+  uv run python -c "from app.migration import run_migration; from app.ingestion import ingest_conversations; print(run_migration()); print(ingest_conversations())"
+```
+Leaves the store at the clean 2-student baseline (Alice + Bob). The wizard's
+wave-2 import and its Reset button work from there.
+
+## 5. Route Caddy to it
+Append `deploy/caddy-tal.conf` to the VPS Caddyfile (wherever the vps compose
+mounts it, e.g. `~/vps/Caddyfile`), then reload Caddy gracefully:
+```bash
+cat ~/tal-memory-demo/deploy/caddy-tal.conf >> ~/vps/Caddyfile
+docker compose -f ~/vps/docker-compose.yml exec caddy caddy reload --config /etc/caddy/Caddyfile
+```
+(A bad edit fails the reload and leaves the running config untouched - existing
+sites keep serving.)
 
 ## 6. Verify
-- `/health` returns `{"status":"ok"}` (no auth).
-- The URL prompts for the password, then `/`, `/meet`, `/vision`, `/architecture`,
-  `/wizard` all render; `/meet` shows Bob's then/now; an "ask" returns an answer.
+- `https://tal.softwisery.com/health` -> `{"status":"ok"}` (no auth).
+- The site prompts for the password, then `/`, `/meet`, `/vision`, `/architecture`,
+  `/wizard` render; `/meet` shows Bob's then/now; an "ask" returns an answer.
 
-## Notes
-- **Static**: `mermaid.min.js` (~3.3 MB) ships in the image and is served by the
-  app - fine on a persistent server.
-- **Cost control**: the gate keeps randoms off the key; the spend cap is the hard
-  backstop. For a fully free public link, pre-compute the `/meet` + `/chat`
-  answers instead of calling OpenAI live.
-- **Free tiers**: Render's free web service spins down when idle (slow first
-  click) and free Postgres expires after ~30 days. Use `starter` for a demo that
-  must stay warm across weeks.
+## Updating later
+Re-run the `rsync` (step 1), then:
+```bash
+docker compose -f docker-compose.prod.yml up -d --build
+```
+The DB volume persists, so students/facts survive a redeploy. To wipe and
+re-seed: `docker compose -f docker-compose.prod.yml down -v` then repeat steps 3-4.
+
+## Alternative (paid): Render
+`render.yaml` describes a Render Blueprint (web service + managed Postgres).
+Render now requires a card, so the VPS is the free path; the Render config is
+kept for a future paid option.

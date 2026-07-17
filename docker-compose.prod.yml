@@ -1,0 +1,52 @@
+# Production compose for the VPS. Two containers on a private network:
+#   tal-db   - Postgres + pgvector (NOT published to the host; only the app
+#              reaches it over the private network). schema.sql auto-applies on
+#              first init (tables, RLS, the tal_app role, the Alice/Bob seed).
+#   tal-app  - the FastAPI app, published on host port 8010, which the existing
+#              Caddy reverse-proxies via host.docker.internal (same pattern as
+#              the newsoracul service).
+#
+# Secrets come from a .env in this directory (compose interpolates ${...}); they
+# are set as the app container's environment, never baked into the image:
+#   OPENAI_API_KEY=sk-...        # a DEDICATED, spend-capped key
+#   DEMO_PASSWORD=...            # the shared password that gates the public URL
+#   OPENAI_MODEL=gpt-4o-mini     # optional override
+#
+# Deploy:  docker compose -f docker-compose.prod.yml up -d --build
+services:
+  tal-db:
+    image: pgvector/pgvector:pg17
+    container_name: tal-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres      # internal only - db is not exposed to the host
+      POSTGRES_DB: tal
+    volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+      - tal_pgdata:/var/lib/postgresql/data
+    networks: [tal]
+
+  tal-app:
+    build: .
+    container_name: tal-app
+    restart: unless-stopped
+    depends_on: [tal-db]
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?set OPENAI_API_KEY in .env}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}
+      RECONCILE_JUDGE_MODEL: ${RECONCILE_JUDGE_MODEL:-gpt-4o}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:?set DEMO_PASSWORD in .env}
+      DSN_OWNER: postgresql://postgres:postgres@tal-db:5432/tal
+      DSN_APP: postgresql://tal_app:tal_app@tal-db:5432/tal
+      PORT: "8000"
+    ports:
+      - "8010:8000"       # Caddy reaches this via host.docker.internal:8010
+    networks: [tal]
+
+networks:
+  tal:
+    driver: bridge
+
+volumes:
+  tal_pgdata:
