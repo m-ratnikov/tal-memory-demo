@@ -40,21 +40,26 @@ app = FastAPI(title="TAL-style memory layer - demo")
 
 @app.middleware("http")
 async def _password_gate(request, call_next):
-    """Optional shared-password gate for a public deployment. When DEMO_PASSWORD
-    is set (in the host's env), every path except the health check requires HTTP
-    Basic auth with that password; unset (local dev), the gate is a no-op. The
-    username is ignored - this is one shared secret, not per-user auth. Read from
-    the environment per request so it needs no import-time ordering."""
+    """Optional shared-credential gate for a public deployment. When
+    DEMO_PASSWORD is set (in the host's env), every path except the health check
+    requires HTTP Basic auth; unset (local dev), the gate is a no-op. If DEMO_USER
+    is also set, the username must match it too (a proper username/password pair);
+    if DEMO_USER is empty, any username is accepted. Read from the environment per
+    request so it needs no import-time ordering."""
     pw = os.getenv("DEMO_PASSWORD")
     if pw and request.url.path != "/health":
+        want_user = os.getenv("DEMO_USER") or ""
         header = request.headers.get("authorization", "")
-        supplied = ""
+        got_user, got_pw = "", ""
         if header.startswith("Basic "):
             try:
-                supplied = base64.b64decode(header[6:]).decode("utf-8").partition(":")[2]
+                got_user, _, got_pw = base64.b64decode(
+                    header[6:]).decode("utf-8").partition(":")
             except Exception:
-                supplied = ""
-        if not secrets.compare_digest(supplied, pw):
+                got_user, got_pw = "", ""
+        ok_pw = secrets.compare_digest(got_pw, pw)
+        ok_user = (not want_user) or secrets.compare_digest(got_user, want_user)
+        if not (ok_pw and ok_user):
             return Response(
                 "Authentication required.", status_code=401,
                 headers={"WWW-Authenticate": 'Basic realm="TAL demo"'})
