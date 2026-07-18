@@ -15,8 +15,6 @@ Pure frontend over the existing GET /students/{id}/ask?q= JSON endpoint - the
 page is a thin client, no new server logic on the answer path.
 """
 
-import html
-
 from fastapi import APIRouter
 from fastapi.responses import HTMLResponse
 
@@ -114,10 +112,6 @@ _SCRIPT = """<script>
 </script>"""
 
 
-def _esc(v) -> str:
-    return html.escape(str(v)) if v is not None else ""
-
-
 @router.get("", response_class=HTMLResponse)
 def chat() -> HTMLResponse:
     with owner_conn() as conn:
@@ -125,9 +119,9 @@ def chat() -> HTMLResponse:
             "SELECT id, name FROM students ORDER BY name"
         ).fetchall()
 
-    options = "".join(f"<option value='{sid}'>{_esc(name)}</option>"
+    options = "".join(f"<option value='{sid}'>{theme.esc(name)}</option>"
                       for sid, name in students)
-    examples = "".join(f"<button>{_esc(q)}</button>" for q in _EXAMPLES)
+    examples = "".join(f"<button>{theme.esc(q)}</button>" for q in _EXAMPLES)
 
     body = (
         "<div class='subnav'><a href='/under-hood'>&larr; under the hood</a> "

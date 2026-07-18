@@ -32,7 +32,6 @@ Routes:
   GET  /review/labels                 - flagged rows as eval-case candidates (JSON)
 """
 
-import html
 import uuid
 
 from fastapi import APIRouter, Form
@@ -70,14 +69,9 @@ _SCROLL_JS = """<script>
 
 def _page(title: str, body: str) -> HTMLResponse:
     return HTMLResponse(theme.shell(
-        title, f"<h1>{html.escape(title)}</h1>{body}",
+        title, f"<h1>{theme.esc(title)}</h1>{body}",
         active="/under-hood", scripts=_SCROLL_JS,
     ))
-
-
-def _esc(value) -> str:
-    """html.escape that tolerates None (audit WHY-fields are nullable)."""
-    return html.escape(str(value)) if value is not None else ""
 
 
 @router.get("", response_class=HTMLResponse)
@@ -107,9 +101,9 @@ def review_queue() -> HTMLResponse:
 
     body_rows = "".join(
         f"<tr class='{'recent' if is_recent else ''}'>"
-        f"<td>{_esc(name)}"
+        f"<td>{theme.esc(name)}"
         + (" <span class='badge new'>new</span>" if is_recent else "")
-        + f"</td><td>{_esc(stype)}</td>"
+        + f"</td><td>{theme.esc(stype)}</td>"
         f"<td><span class='badge pending'>{pending} pending</span> "
         f"<span class='badge approved'>{approved} ok</span> "
         f"<span class='badge flagged'>{flagged} flagged</span></td>"
@@ -242,7 +236,7 @@ def review_answers(limit: int = 50) -> HTMLResponse:
         facts = "".join(
             f"<tr><td>#{f['rank']}</td><td>{f.get('similarity', '')}</td>"
             f"<td>{f.get('recency', '')}</td><td>{f['score']}</td>"
-            f"<td>[{_esc(f['kind'])}]</td><td>{_esc(f['content'])}</td></tr>"
+            f"<td>[{theme.esc(f['kind'])}]</td><td>{theme.esc(f['content'])}</td></tr>"
             for f in retrieved
         ) or "<tr><td colspan='6'>(nothing retrieved - refusal path)</td></tr>"
         # Flag-only review: no Approve on a stream (it never completes) - just
@@ -250,7 +244,7 @@ def review_answers(limit: int = 50) -> HTMLResponse:
         if flagged_at:
             verdict = (
                 f"<span class='badge flagged'>flagged</span> "
-                + (f"<span class='note'>note: {_esc(note)}</span> " if note else "")
+                + (f"<span class='note'>note: {theme.esc(note)}</span> " if note else "")
                 + f"<form class='verdict' method='post' "
                   f"action='/review/answers/{aid}/flag'>"
                   f"<input type='hidden' name='action' value='unflag'>"
@@ -266,10 +260,10 @@ def review_answers(limit: int = 50) -> HTMLResponse:
             )
         cards.append(
             f"<div class='card'>"
-            f"<div><b>{_esc(name)}</b> asked at {created:%Y-%m-%d %H:%M} "
-            f"<span class='why'>({_esc(model)})</span></div>"
-            f"<div class='why'>Q: {_esc(question)}</div>"
-            f"<div>A: {_esc(answer)}</div>"
+            f"<div><b>{theme.esc(name)}</b> asked at {created:%Y-%m-%d %H:%M} "
+            f"<span class='why'>({theme.esc(model)})</span></div>"
+            f"<div class='why'>Q: {theme.esc(question)}</div>"
+            f"<div>A: {theme.esc(answer)}</div>"
             f"<details><summary class='why'>retrieved snapshot "
             f"({len(retrieved)} facts)</summary>"
             f"<table>{facts}</table></details>"
@@ -317,14 +311,14 @@ def _load_source(source_type: str, source_id: uuid.UUID) -> str:
             row = conn.execute(
                 "SELECT content FROM raw_reports WHERE id = %s", (source_id,)
             ).fetchone()
-            return _esc(row[0]) if row else "(source not found)"
+            return theme.esc(row[0]) if row else "(source not found)"
         rows = conn.execute(
             "SELECT role, content FROM messages "
             "WHERE conversation_id = %s ORDER BY created_at",
             (source_id,),
         ).fetchall()
         return "\n".join(
-            f"<b>{_esc(role)}:</b> {_esc(content)}" for role, content in rows
+            f"<b>{theme.esc(role)}:</b> {theme.esc(content)}" for role, content in rows
         ) or "(source not found)"
 
 
@@ -355,17 +349,17 @@ def review_source(source_type: str, source_id: uuid.UUID) -> HTMLResponse:
             # student's first facts) - the judge still relates them as "new".
             dist_txt = (f"nearest dist {dist:.3f}" if dist is not None
                         else "no candidates in net")
-            why = (f"<div class='why'>judge: <b>{_esc(relation)}</b> "
-                   f"({dist_txt}) - {_esc(reason)}</div>")
+            why = (f"<div class='why'>judge: <b>{theme.esc(relation)}</b> "
+                   f"({dist_txt}) - {theme.esc(reason)}</div>")
             if matched:
-                why += f"<div class='matched'>vs: &ldquo;{_esc(matched)}&rdquo;</div>"
-        verdict_note = f"<div class='note'>note: {_esc(note)}</div>" if note else ""
+                why += f"<div class='matched'>vs: &ldquo;{theme.esc(matched)}&rdquo;</div>"
+        verdict_note = f"<div class='note'>note: {theme.esc(note)}</div>" if note else ""
 
         def _form(label: str, new_status: str, css: str = "",
                   note_input: bool = False) -> str:
             return (
                 f"<form class='verdict' method='post' action='/review/{aid}/verdict'>"
-                f"<input type='hidden' name='source_type' value='{_esc(source_type)}'>"
+                f"<input type='hidden' name='source_type' value='{theme.esc(source_type)}'>"
                 f"<input type='hidden' name='source_id' value='{source_id}'>"
                 f"<input type='hidden' name='status' value='{new_status}'>"
                 + ("<input name='note' placeholder='why is this wrong?'> "
@@ -383,7 +377,7 @@ def review_source(source_type: str, source_id: uuid.UUID) -> HTMLResponse:
             f"<div class='card'>"
             f"<span class='badge {status}'>{status}</span> "
             f"<span class='action {action}'>{action.upper()}</span> "
-            f"[{_esc(kind)}] {_esc(content)}"
+            f"[{theme.esc(kind)}] {theme.esc(content)}"
             f"{why}{verdict_note}<div>{buttons}</div></div>"
         )
 

@@ -17,7 +17,6 @@ Server-rendered like the review UI; while a job runs the page re-polls via
 order because every underlying operation is idempotent by structure.
 """
 
-import html
 import logging
 
 from fastapi import APIRouter, Form
@@ -29,7 +28,6 @@ from app.importer.files import FileDataSource
 from app.importer.service import run_import
 from app.ingestion import ingest_conversations
 from app.migration import run_migration
-from app.review import _esc  # shared escaper
 from evals.store_invariants import run_sweep
 
 log = logging.getLogger(__name__)
@@ -185,7 +183,7 @@ def _incoming() -> tuple[str, int]:
     try:
         bundles = list(FileDataSource(WAVE2_PATH).read())
     except Exception as exc:  # a missing/broken fixture should not 500 the page
-        return (f"<p class='note'>Could not read incoming records: {_esc(exc)}</p>", 0)
+        return (f"<p class='note'>Could not read incoming records: {theme.esc(exc)}</p>", 0)
     if not bundles:
         return ("<p class='why'>No incoming records found.</p>", 0)
 
@@ -195,15 +193,15 @@ def _incoming() -> tuple[str, int]:
         for r in b.reports:
             recs.append(
                 f"<div class='rec'><b>Report</b> "
-                f"<span class='why'>{r.created_at:%b %Y}</span><br>{_esc(r.content)}</div>")
+                f"<span class='why'>{r.created_at:%b %Y}</span><br>{theme.esc(r.content)}</div>")
         for c in b.conversations:
             lines = "<br>".join(
-                f"<b>{_esc(m.role)}:</b> {_esc(m.content)}" for m in c.messages)
+                f"<b>{theme.esc(m.role)}:</b> {theme.esc(m.content)}" for m in c.messages)
             recs.append(
                 f"<div class='rec'><b>Conversation</b> "
                 f"<span class='why'>{c.started_at:%b %Y}</span><br>{lines}</div>")
         cards.append(
-            f"<div class='incoming'><b>{_esc(b.name)}</b> "
+            f"<div class='incoming'><b>{theme.esc(b.name)}</b> "
             f"<span class='why'>({len(b.reports)} report(s), "
             f"{len(b.conversations)} conversation(s))</span>"
             f"<details><summary class='why'>see the raw records</summary>"
@@ -251,7 +249,7 @@ def wizard() -> HTMLResponse:
         "a second adapter behind the same interface.</p>"
         f"{incoming_html}"
         "<form id='import-form' method='post' action='/wizard/import'>"
-        f"<button>{_esc(btn_label)}</button></form>"
+        f"<button>{theme.esc(btn_label)}</button></form>"
         f"<div id='import-status'>{imp}</div></div>"
     )
 
@@ -261,7 +259,7 @@ def wizard() -> HTMLResponse:
         body = (f"<p class='running'>Distilling&hellip; {pending} "
                 f"source(s) left</p>")
     elif distill["status"] == "error":
-        body = f"<p class='note'>Distill failed: {_esc(distill['error'])}</p>"
+        body = f"<p class='note'>Distill failed: {theme.esc(distill['error'])}</p>"
     elif pending:
         body = (f"<p>{c['reports_pending']} report(s) and "
                 f"{c['convos_pending']} conversation(s) pending "
@@ -303,14 +301,14 @@ def wizard() -> HTMLResponse:
         body = ("<p class='running'>Sweeping for contradictions&hellip; "
                 "(one judge call per candidate pair)</p>")
     elif assess["status"] == "error":
-        body = f"<p class='note'>Assessment failed: {_esc(assess['error'])}</p>"
+        body = f"<p class='note'>Assessment failed: {theme.esc(assess['error'])}</p>"
     elif assess["status"] == "done":
         r = assess["result"]
         if r["violations"]:
             rows = "".join(
-                f"<div class='card'><b>{_esc(v['student'])}</b> "
-                f"(dist {v['distance']:.3f})<br>{_esc(v['a'])}<br>"
-                f"{_esc(v['b'])}<div class='why'>{_esc(v['reason'])}</div></div>"
+                f"<div class='card'><b>{theme.esc(v['student'])}</b> "
+                f"(dist {v['distance']:.3f})<br>{theme.esc(v['a'])}<br>"
+                f"{theme.esc(v['b'])}<div class='why'>{theme.esc(v['reason'])}</div></div>"
                 for v in r["violations"])
             body = (f"<p class='verdict-red'>{len(r['violations'])} "
                     f"contradicting live pair(s) across "
@@ -324,7 +322,7 @@ def wizard() -> HTMLResponse:
         body = ""
     boxes = "".join(
         f"<label><input type='checkbox' name='student_id' value='{sid}'> "
-        f"{_esc(name)} <span class='why'>({n_facts} live facts)</span>"
+        f"{theme.esc(name)} <span class='why'>({n_facts} live facts)</span>"
         f"</label><br>"
         for sid, name, _ext, n_facts in c["students"]
     )
