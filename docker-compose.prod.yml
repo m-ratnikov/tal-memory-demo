@@ -11,6 +11,8 @@
 #   OPENAI_API_KEY=sk-...        # a DEDICATED, spend-capped key
 #   DEMO_PASSWORD=...            # the shared password that gates the public URL
 #   OPENAI_MODEL=gpt-4o-mini     # optional override
+#   LANGSMITH_TRACING=true       # optional - ship write/read-path traces
+#   LANGSMITH_API_KEY=lsv2-...   #   (required when LANGSMITH_TRACING=true)
 #
 # Deploy:  docker compose -f docker-compose.prod.yml up -d --build
 services:
@@ -41,6 +43,13 @@ services:
       DSN_OWNER: postgresql://postgres:postgres@tal-db:5432/tal
       DSN_APP: postgresql://tal_app:tal_app@tal-db:5432/tal
       PORT: "8000"
+      # LangSmith tracing (LLM observability) - off unless LANGSMITH_TRACING is
+      # set in this dir's .env. LangChain/LangGraph read these directly; the app
+      # only reports the state. Endpoint defaults to LangSmith US when unset.
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-tal-memory-demo}
+      LANGSMITH_ENDPOINT: ${LANGSMITH_ENDPOINT:-}
     ports:
       - "8010:8000"       # Caddy reaches this via host.docker.internal:8010
     networks: [tal]
