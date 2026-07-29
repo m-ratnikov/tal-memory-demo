@@ -70,6 +70,29 @@ docker compose -f docker-compose.prod.yml up -d --build
 The DB volume persists, so students/facts survive a redeploy. To wipe and
 re-seed: `docker compose -f docker-compose.prod.yml down -v` then repeat steps 3-4.
 
+## Login tracking (who is trying the demo)
+When `DEMO_PASSWORD` is set, **every** login attempt is logged - from every IP,
+both successful (`OK`) and failed (`FAIL`), with no de-duplication. Each attempt is:
+- printed to stdout (so `docker logs tal-app` shows the `DEMO LOGIN` lines), and
+- appended to a file (default `login.log` in the workdir) as
+  `timestamp <TAB> OK|FAIL <TAB> ip <TAB> user <TAB> path <TAB> user-agent`.
+
+The IP comes from `X-Forwarded-For` (set by Caddy), so it is the real visitor,
+not the proxy. Basic auth resends the password on every request, so one page
+view produces several `OK` lines (the page plus its assets) - that is expected.
+`FAIL` lines are wrong-credential attempts, i.e. someone probing the URL.
+
+Read it live from the running container:
+```bash
+docker logs -f tal-app | grep "DEMO LOGIN"          # stdout
+docker exec tal-app cat login.log                   # the file
+docker exec tal-app grep FAIL login.log             # only failed attempts
+docker exec tal-app awk -F'\t' '{print $3}' login.log | sort -u   # unique IPs
+```
+The container filesystem is ephemeral, so `login.log` resets on redeploy (stdout
+survives in the Docker journal). To keep the file across redeploys, set
+`DEMO_LOGIN_LOG` to a path on a mounted volume.
+
 ## Alternative (paid): Render
 `render.yaml` describes a Render Blueprint (web service + managed Postgres).
 Render now requires a card, so the VPS is the free path; the Render config is

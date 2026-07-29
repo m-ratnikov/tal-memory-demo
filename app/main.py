@@ -9,9 +9,11 @@ Docs: http://localhost:8000/docs  (auto-generated)
 """
 
 import base64
+import logging
 import os
 import secrets
 import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 
 from fastapi import FastAPI
@@ -37,6 +39,47 @@ obs.configure_logging()  # one-time logging bootstrap at the composition root
 
 app = FastAPI(title="TAL-style memory layer - demo")
 
+# --- Login tracking (who is trying the demo) --------------------------------
+# Every credential submission is logged, from every IP, success or failure, with
+# no de-duplication. Basic auth resends the password on each request, so a single
+# page view (its assets included) produces several OK lines - that is expected;
+# "log all attempts" means all of them. The browser's first no-credentials probe
+# (the one that draws the 401 challenge) is NOT a submission, so it is skipped.
+_access_log = logging.getLogger("app.access")
+# Appended to a file (default login.log in the workdir) AND emitted to stdout
+# via the logger, so it shows up in `docker logs` too. On an ephemeral
+# container filesystem the file resets on redeploy - point DEMO_LOGIN_LOG at a
+# mounted volume to keep the history across deploys.
+_LOGIN_LOG = os.getenv("DEMO_LOGIN_LOG", "login.log")
+
+
+def _client_ip(request) -> str:
+    """The real client IP behind the reverse proxy. Caddy/most proxies set
+    X-Forwarded-For; the first hop is the original client. Fall back to the
+    socket peer for a direct (no-proxy) connection."""
+    xff = request.headers.get("x-forwarded-for", "")
+    if xff:
+        return xff.split(",")[0].strip()
+    return request.client.host if request.client else "unknown"
+
+
+def _log_attempt(request, ok: bool, user: str) -> None:
+    """Record one login attempt - every one, from every IP, no de-dup. `ok` is
+    whether the submitted credentials matched; `user` is the submitted username."""
+    ip = _client_ip(request)
+    result = "OK" if ok else "FAIL"
+    ua = request.headers.get("user-agent", "-")
+    _access_log.info(
+        "DEMO LOGIN %s ip=%s user=%s path=%s ua=%s",
+        result, ip, user or "-", request.url.path, ua)
+    ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")
+    line = f"{ts}\t{result}\t{ip}\t{user or '-'}\t{request.url.path}\t{ua}\n"
+    try:
+        with open(_LOGIN_LOG, "a", encoding="utf-8") as f:
+            f.write(line)
+    except OSError as e:  # a read-only FS should never take the demo down
+        _access_log.warning("could not write %s: %s", _LOGIN_LOG, e)
+
 
 @app.middleware("http")
 async def _password_gate(request, call_next):
@@ -51,7 +94,8 @@ async def _password_gate(request, call_next):
         want_user = os.getenv("DEMO_USER") or ""
         header = request.headers.get("authorization", "")
         got_user, got_pw = "", ""
-        if header.startswith("Basic "):
+        has_creds = header.startswith("Basic ")
+        if has_creds:
             try:
                 got_user, _, got_pw = base64.b64decode(
                     header[6:]).decode("utf-8").partition(":")
@@ -59,7 +103,10 @@ async def _password_gate(request, call_next):
                 got_user, got_pw = "", ""
         ok_pw = secrets.compare_digest(got_pw, pw)
         ok_user = (not want_user) or secrets.compare_digest(got_user, want_user)
-        if not (ok_pw and ok_user):
+        ok = ok_pw and ok_user
+        if has_creds:  # a credential was submitted - log the attempt (OK or FAIL)
+            _log_attempt(request, ok, got_user)
+        if not ok:
             return Response(
                 "Authentication required.", status_code=401,
                 headers={"WWW-Authenticate": 'Basic realm="TAL demo"'})
